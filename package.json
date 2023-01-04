@@ -1,6 +1,9 @@
 {
   "name": "canary-pages",
   "scripts": {
-    "build": "cp index.html dist"
+    "build": "cp index.html dist && cp -R test dist"
+  },
+  "devDependencies": {
+    "wrangler": "^2.6.2"
   }
 }

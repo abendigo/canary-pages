@@ -2,6 +2,7 @@ const cookieName = "ab-test-cookie"
 const newHomepagePathName = "/test"
 
 const abTest = async ({request, next, env}) => {
+  console.log(`[LOGGING FROM /hello]: Request came from ${request.url}`);
   /*
   Todo:
   1. Conditional statements to check for the cookie
@@ -13,6 +14,7 @@ const abTest = async ({request, next, env}) => {
     // if no cookie set, pass x% of traffic and set a cookie value to "current" or "new"
 
     let cookie = request.headers.get("cookie")
+    console.log(`cookie:`, cookie)
     // is cookie set?
     if (cookie && cookie.includes(`${cookieName}=new`)) {
       // Change the request to go to /test (as set in the newHomepagePathName variable)
