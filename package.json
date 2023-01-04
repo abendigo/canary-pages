@@ -1,0 +1,6 @@
+{
+  "name": "canary-pages",
+  "scripts": {
+    "build": "cp index.html dist"
+  }
+}
